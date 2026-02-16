@@ -103,6 +103,16 @@ Optional future extension:
 2. **Immersive project detail layout**: `/projects/[slug]`
 3. **Blog listing + detail layout**: `/blog`, `/blog/[slug]`
 
+## Zero-dependency local preview (works without npm install)
+If your environment blocks npm package downloads, you can still preview the portfolio UI:
+
+```bash
+python scripts/build_preview.py
+python -m http.server 4173 --directory preview
+```
+
+Then open http://localhost:4173
+
 ## Local development
 ```bash
 npm install
