@@ -110,6 +110,22 @@ npm run dev
 ```
 Open http://localhost:3000
 
+## Launching in restricted environments (Docker/devcontainer)
+If direct `npm install` is blocked by your network policy, run the site in Docker and point to an allowed npm mirror.
+
+```bash
+# optional: set mirror/proxy if required by your org
+export NPM_REGISTRY=https://registry.npmjs.org
+export HTTP_PROXY=http://proxy:8080
+export HTTPS_PROXY=http://proxy:8080
+
+docker compose up --build
+```
+
+Then open http://localhost:3000
+
+You can also open this repository in VS Code Dev Containers using `.devcontainer/devcontainer.json`.
+
 ## Build + run
 ```bash
 npm run build
