@@ -1,0 +1,21 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NPM_REGISTRY: ${NPM_REGISTRY-}
+        HTTP_PROXY: ${HTTP_PROXY-}
+        HTTPS_PROXY: ${HTTPS_PROXY-}
+    environment:
+      NODE_ENV: development
+      NEXT_TELEMETRY_DISABLED: "1"
+      RESEND_API_KEY: ${RESEND_API_KEY-}
+      CONTACT_TO_EMAIL: ${CONTACT_TO_EMAIL-}
+      ADMIN_API_TOKEN: ${ADMIN_API_TOKEN-}
+      NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL-http://localhost:3000}
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
