@@ -1,3 +1,3 @@
-# Landing Page
+# Prasanth Konada · Portfolio
 
-A placeholder repository for a landing page. Browse the [GitHub profile](https://github.com/GITHUBKNS) for projects with source code and documentation.
+A static portfolio highlighting validated Databricks and AWS projects. Deploy the root of `main` with GitHub Pages. Open `index.html` locally to preview.
